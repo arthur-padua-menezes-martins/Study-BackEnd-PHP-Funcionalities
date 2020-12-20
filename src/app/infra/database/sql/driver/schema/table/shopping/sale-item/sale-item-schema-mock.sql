@@ -1,0 +1,7 @@
+INSERT INTO sale_items VALUES(1,1,1,10.0,40.0);
+INSERT INTO sale_items VALUES(2,2,2,2.0,180.0);
+INSERT INTO sale_items VALUES(3,3,3,10.0,35.0);
+INSERT INTO sale_items VALUES(4,4,4,10.0,40.0);
+INSERT INTO sale_items VALUES(5,5,5,1.0,900.0);
+INSERT INTO sale_items VALUES(6,6,6,1.0,700.0);
+INSERT INTO sale_items VALUES(7,7,7,10.0,80.0);

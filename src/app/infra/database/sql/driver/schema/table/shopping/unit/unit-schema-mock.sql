@@ -1,0 +1,18 @@
+INSERT INTO units VALUES(1,'cm','Centímetro');
+INSERT INTO units VALUES(2,'m','Metro');
+INSERT INTO units VALUES(3,'cm2','Centímetro quadrado');
+INSERT INTO units VALUES(4,'m2','Metro quadrado');
+INSERT INTO units VALUES(5,'cm3','Centímetro cúbico');
+INSERT INTO units VALUES(6,'m3','Metro cúbico');
+INSERT INTO units VALUES(7,'Kg','Kilograma');
+INSERT INTO units VALUES(8,'Gr','Grama');
+INSERT INTO units VALUES(9,'L','Litro');
+INSERT INTO units VALUES(10,'PC','Peça');
+INSERT INTO units VALUES(11,'PCT','Pacote');
+INSERT INTO units VALUES(12,'CX','Caixa');
+INSERT INTO units VALUES(13,'SAC','Saco');
+INSERT INTO units VALUES(14,'TON','Tonelada');
+INSERT INTO units VALUES(15,'KIT','Kit');
+INSERT INTO units VALUES(16,'GL','Galão');
+INSERT INTO units VALUES(17,'FD','Fardo');
+INSERT INTO units VALUES(18,'BL','Bloco');
