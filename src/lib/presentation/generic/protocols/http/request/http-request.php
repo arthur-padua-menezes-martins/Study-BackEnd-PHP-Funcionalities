@@ -7,9 +7,10 @@ use lib\presentation\generic\protocols\http\request\session\HttpRequestSessionIn
 use lib\presentation\generic\protocols\http\request\body\HttpRequestBodyInterface;
 use lib\presentation\generic\protocols\http\request\params\HttpRequestParamsInterface;
 use lib\presentation\generic\protocols\http\request\query\HttpRequestQueryInterface;
+use lib\presentation\generic\protocols\http\request\options\HttpRequestOptionsInterface;
 
 /** application request type */
-class HttpRequest {
+class HttpRequestInterface {
   /** @var HttpRequestHeadersInterface $headers request headers */
   public HttpRequestHeadersInterface $headers;
   /** @var HttpRequestSessionInterface $session request session */
@@ -20,6 +21,8 @@ class HttpRequest {
   public HttpRequestParamsInterface $params;
   /** @var HttpRequestQueryInterface $query request url query string */
   public HttpRequestQueryInterface $query;
+  /** @var HttpRequestOptionsInterface $options request options */
+  public HttpRequestOptionsInterface $options;
 }
 
 ?>
