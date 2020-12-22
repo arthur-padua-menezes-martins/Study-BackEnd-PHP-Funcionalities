@@ -2,8 +2,8 @@
 
 namespace lib\data\usecases\session;
 
-use lib\data\usecases\session\finalize\FinalizeSession;
+use lib\data\usecases\session\cycle\CycleSession;
 
-abstract class SessionController extends FinalizeSession {}
+abstract class SessionController extends CycleSession {}
 
 ?>
