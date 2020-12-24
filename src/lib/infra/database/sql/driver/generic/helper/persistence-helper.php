@@ -7,7 +7,9 @@ use lib\infra\database\sql\driver\generic\helper\PersistenceTransactionHelper;
 
 /** auxiliary to access persistence model */
 class PersistenceHelper extends PersistenceTransactionHelper {
-  /** class instance */
+  /**
+  * @var self $_instance class instance
+  */
   private static self $_instance;
 
   /** restricted constructor */
@@ -15,9 +17,9 @@ class PersistenceHelper extends PersistenceTransactionHelper {
 
   /**
   * get instance of the class
-  * @returns {self} instance of the class
+  * @return self instance of the class
   */
-  static function instance(): self {
+  public static function instance(): self {
     if (!self::$_instance) {
       self::$_instance = new self();
     }

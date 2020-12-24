@@ -7,7 +7,9 @@ use lib\infra\database\sql\driver\generic\protocols\ConnectionHelperInterface;
 
 /** auxiliary to connect the database */
 class PersistenceConnectionHelper implements ConnectionHelperInterface {
-  /** conection */
+  /**
+  * @var PDO $client conection
+  */
   protected PDO $client;
 
   /** restricted constructor */
@@ -23,7 +25,7 @@ class PersistenceConnectionHelper implements ConnectionHelperInterface {
     $host = isset($connectionConfig['host']) ? $connectionConfig['host'] : NULL;
     $type = isset($connectionConfig['type']) ? $connectionConfig['type'] : NULL;
     $port = isset($connectionConfig['port']) ? $connectionConfig['port'] : NULL;
-    
+
     switch ($type) {
       case 'pgsql':
         $port = '5432';
@@ -44,19 +46,19 @@ class PersistenceConnectionHelper implements ConnectionHelperInterface {
 
   /**
   * verify if connection is established
-  * @returns {boolean} represents if persistence model is connected
+  * @return boolean represents if persistence model is connected
   */
-  public function isConnected(): bool {
+  public function is_connected(): bool {
     $isConnected = $this->client !== null;
     return $isConnected;
   }
 
   /**
   * get connection
-  * @returns {PDO} persistence connection
+  * @return PDO persistence connection
   */
-  public function getConnection(): PDO {
-    $isConnected = $this->isConnected();
+  public function get_connection(): PDO {
+    $isConnected = $this->is_connected();
   
     if (!$isConnected) {
       $this->connect();
