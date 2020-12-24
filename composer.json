@@ -1,0 +1,12 @@
+{
+  "name": "arthur/api",
+  "authors": [{
+      "name": "Arthur",
+      "email": "arthur.software.developer@gmail.com"
+  }],
+  "require": {},
+  "require-dev": {
+    "phpunit/phpunit": "^6.4",
+    "coffeecode/router": "1.0.*"
+  }
+}
