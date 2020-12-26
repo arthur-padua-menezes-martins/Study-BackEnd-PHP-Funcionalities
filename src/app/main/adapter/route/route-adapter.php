@@ -4,34 +4,23 @@ namespace app\main\adapter\route;
 
 use lib\presentation\generic\protocols\controller\ControllerInterface;
 use lib\presentation\generic\protocols\http\request\HttpRequestInterface;
-use app\main\adapter\route\headers\RouteHeadersAdapter;
-use app\main\adapter\route\session\RouteSessionAdapter;
-use app\main\adapter\route\body\RouteBodyAdapter;
-use app\main\adapter\route\params\RouteParamsAdapter;
-use app\main\adapter\route\query\RouteQueryAdapter;
-use app\main\adapter\route\options\RouteOptionsAdapter;
+use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
+use app\main\adapter\route\content\RouteContentAdapter;
 
-/**
-* route adaptation to application concept
-* @param ControllerInterface $controller application controller
-*/
+/** route adaptation to application concept */
 class RouteAdapter {
-  use RouteHeadersAdapter, RouteSessionAdapter, RouteBodyAdapter, RouteParamsAdapter, RouteQueryAdapter, RouteOptionsAdapter;
-
-  /** application entry point */
-  static public function handle(ControllerInterface $controller) {
+  /**
+  * application entry point
+  * @param ControllerInterface $controller route controller
+  */
+  static public function handle(ControllerInterface $controller): HttpResponseInterface {
     $request = new HttpRequestInterface();
-    $request->headers = self::getHeaders(getallheaders());
-    $request->session = self::getSession($_SESSION);
-    $request->body = self::getBody($_POST);
-    $request->params = self::getParams($_GET);
-    $request->query = self::getQuery($_GET);
-    $request->options = self::getOptions($_REQUEST);
-  
+    RouteContentAdapter::adapt($request, ['headers' => getallheaders(), 'session' => $_SESSION, 'body' => $_POST, 'params' => $_GET, 'query' => $_GET, 'options' => $_SERVER]);
+
     $response = $controller->handle($request);
 
-    $request->headers->instance->setStatusCode($response->statusCode);
-    print $response;
+    $request->headers->instance->set_status_code($response->statusCode);
+    return $response;
   }
 }
 
