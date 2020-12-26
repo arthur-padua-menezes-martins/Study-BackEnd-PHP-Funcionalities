@@ -2,11 +2,11 @@
 
 namespace lib\presentation\generic\protocols\http\request\headers;
 
-use lib\data\protocols\headers\cycle\CycleHeadersInterface;
+use lib\data\protocols\http\headers\LifeCycleHeadersInterface;
 
 abstract class HttpRequestHeadersInterface {
-  /** @var CycleHeadersInterface $instance headers controller instance */
-  public CycleHeadersInterface $instance;
+  /** @var CycleHeadersInterface $instance headers controller methods */
+  public LifeCycleHeadersInterface $methods;
   /** @var string $accept resquest accept */
   public string $accept;
   /** @var string $content_type resquest content type */
