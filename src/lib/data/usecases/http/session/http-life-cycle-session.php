@@ -6,6 +6,8 @@ use lib\data\protocols\http\session\LifeCycleSessionInterface;
 
 /** auxiliary to session life cycle */
 final class LifeCycleSession implements LifeCycleSessionInterface {
+  /** class instance */
+  static private self $_instance;
   /** session content */
   static private array $_session;
 
@@ -22,12 +24,13 @@ final class LifeCycleSession implements LifeCycleSessionInterface {
       session_start();
     }
 
+    self::$_instance = new self();
+
     if (!(self::$_session)) {
       self::$_session = $session;
     }
-  
-    $session_instance = new self(); 
-    return $session_instance;
+
+    return self::$_instance::$_instance;
   }
 
   /**
@@ -36,7 +39,9 @@ final class LifeCycleSession implements LifeCycleSessionInterface {
   * @return bool has property
   */
   public function has(string $property): bool {
-    return !empty(self::$_session[$property]) && isset(self::$_session[$property]);
+    return 
+      !empty(self::$_session[$property]) && 
+      isset(self::$_session[$property]);
   }
 
   /** regenerate session id */
