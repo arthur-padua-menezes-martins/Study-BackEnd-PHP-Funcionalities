@@ -5,7 +5,7 @@ namespace lib\presentation\generic\protocols\http\request\headers;
 use lib\data\protocols\http\headers\LifeCycleHeadersInterface;
 
 abstract class HttpRequestHeadersInterface {
-  /** @var CycleHeadersInterface $instance headers controller methods */
+  /** @var LifeCycleHeadersInterface $instance headers controller methods */
   public LifeCycleHeadersInterface $methods;
   /** @var string $accept resquest accept */
   public string $accept;
