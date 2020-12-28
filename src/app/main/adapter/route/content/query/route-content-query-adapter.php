@@ -2,19 +2,20 @@
 
 namespace app\main\adapter\route\content\query;
 
+use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\query\HttpRequestQueryInterface;
 
 /** route query adaptation to application concept */
-trait RouteQueryAdapter {
+class RouteQueryAdapter implements AdapterRouteContentInterface {
   /**
   * adapt request query to application query 
-  * @param array $requestQuery request query
+  * @param array $request_content request query
   * @return HttpRequestQueryInterface application query
   */
-  static public function adapt_query(array $requestQuery): array {
+  static public function adapt(array $request_content): array {
     $query = new HttpRequestQueryInterface();
     
-    return $requestQuery;
+    return $request_content;
   }
 }
 

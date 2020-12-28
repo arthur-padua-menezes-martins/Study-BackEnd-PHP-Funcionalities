@@ -2,19 +2,20 @@
 
 namespace app\main\adapter\route\content\params;
 
+use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\params\HttpRequestParamsInterface;
 
 /** route params adaptation to application concept */
-trait RouteParamsAdapter {
+class RouteParamsAdapter implements AdapterRouteContentInterface {
   /**
   * adapt request params to application params 
-  * @param array $requestParams request params
+  * @param array $request_content request params
   * @return HttpRequestParamsInterface application params
   */
-  static public function adapt_params(array $requestParams): array {
+  static public function adapt(array $request_content): array {
     $params = new HttpRequestParamsInterface();
     
-    return $requestParams;
+    return $request_content;
   }
 }
 
