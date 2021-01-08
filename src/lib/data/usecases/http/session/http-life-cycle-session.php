@@ -2,7 +2,7 @@
 
 namespace lib\data\usecases\http\session;
 
-use lib\data\protocols\http\session\LifeCycleSessionInterface;
+use lib\data\protocols\specific\http\session\LifeCycleSessionInterface;
 
 /** auxiliary to session life cycle */
 final class LifeCycleSession implements LifeCycleSessionInterface {

@@ -2,7 +2,7 @@
 
 namespace app\main\adapter\route\content\session;
 
-use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
+use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\session\HttpRequestSessionInterface;
 use lib\data\usecases\http\session\LifeCycleSession;
 

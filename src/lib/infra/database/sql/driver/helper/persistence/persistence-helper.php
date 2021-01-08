@@ -2,14 +2,11 @@
 
 namespace lib\infra\database\sql\driver\helper\persistence;
 
-use PDO;
 use lib\infra\database\sql\driver\helper\persistence\transaction\PersistenceTransactionHelper;
 
 /** auxiliary to access persistence model */
 class PersistenceHelper extends PersistenceTransactionHelper {
-  /**
-  * @var self $_instance class instance
-  */
+  /** @var self $_instance class instance */
   private static self $_instance;
 
   /** restricted constructor */
@@ -27,5 +24,7 @@ class PersistenceHelper extends PersistenceTransactionHelper {
     return self::$_instance;
   }
 }
+
+$c = PersistenceHelper::instance();
 
 ?>

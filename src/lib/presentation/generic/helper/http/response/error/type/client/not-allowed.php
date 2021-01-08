@@ -9,7 +9,7 @@ use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
 trait NotAllowed {
   /**
   * not allowed type error
-  * @return HttpResponse default http response structure
+  * @return HttpResponseInterface default http response structure
   */
   public function not_allowed(Exception $errorMessage = null): HttpResponseInterface {
     $httpResponse = new HttpResponseInterface();

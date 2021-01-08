@@ -12,7 +12,7 @@ trait BadRequest {
   * @param mixed $body response body definition
   * @param string $successMessage response success message definition
   * @param Exception $errorMessage response error message definition
-  * @return HttpResponse default http response structure
+  * @return HttpResponseInterface default http response structure
   */
   public function bad_request($body, string $successMessage = '', Exception $errorMessage = null): HttpResponseInterface {
     $httpResponse = new HttpResponseInterface();

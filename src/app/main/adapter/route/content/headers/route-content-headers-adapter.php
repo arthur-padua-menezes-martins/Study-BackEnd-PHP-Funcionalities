@@ -2,7 +2,7 @@
 
 namespace app\main\adapter\route\content\headers;
 
-use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
+use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\headers\HttpRequestHeadersInterface;
 use lib\data\usecases\http\headers\LifeCycleHeaders;
  

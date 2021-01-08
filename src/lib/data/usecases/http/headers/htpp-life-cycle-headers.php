@@ -2,7 +2,7 @@
 
 namespace lib\data\usecases\http\headers;
 
-use lib\data\protocols\http\headers\LifeCycleHeadersInterface;
+use lib\data\protocols\specific\http\headers\LifeCycleHeadersInterface;
 
 /** auxiliary to headers life cycle */
 final class LifeCycleHeaders implements LifeCycleHeadersInterface {

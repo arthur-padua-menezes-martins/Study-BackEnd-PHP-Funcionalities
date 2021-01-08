@@ -2,7 +2,7 @@
 
 namespace app\main\adapter\route\content\query;
 
-use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
+use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\query\HttpRequestQueryInterface;
 
 /** route query adaptation to application concept */

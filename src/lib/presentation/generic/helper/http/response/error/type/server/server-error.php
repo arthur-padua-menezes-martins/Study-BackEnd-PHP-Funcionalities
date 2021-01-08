@@ -11,7 +11,7 @@ trait ServerError {
 
   /**
   * server error status
-  * @return HttpResponse default http response structure
+  * @return HttpResponseInterface default http response structure
   */
   public function server_error(): HttpResponseInterface {
     $httpResponse = new HttpResponseInterface();

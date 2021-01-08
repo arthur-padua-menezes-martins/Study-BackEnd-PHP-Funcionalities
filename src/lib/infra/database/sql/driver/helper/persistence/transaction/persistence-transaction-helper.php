@@ -11,17 +11,17 @@ class PersistenceTransactionHelper extends PersistenceConnectionHelper implement
   private function __construct() {}
 
   /** start persistence transaction */
-  public function start(): void {
+  public function start_transaction(): void {
     $this->client->beginTransaction();
   }
 
   /** cancel persistence transaction */
-  public function cancel(): void {
+  public function cancel_transaction(): void {
     $this->client->rollBack();
   }
 
   /** finalize persistence transaction */
-  public function finalize(): void {
+  public function finalize_transaction(): void {
     $this->client->commit();
   }
 }

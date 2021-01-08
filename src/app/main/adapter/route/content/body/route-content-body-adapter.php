@@ -2,7 +2,7 @@
 
 namespace app\main\adapter\route\content\body;
 
-use lib\data\protocols\adapter\route\content\AdapterRouteContentInterface;
+use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
 use lib\presentation\generic\protocols\http\request\body\HttpRequestBodyInterface;
 
 /** route body adaptation to application concept */
