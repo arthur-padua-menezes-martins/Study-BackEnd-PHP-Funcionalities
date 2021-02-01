@@ -1,15 +1,9 @@
 <?php
 
-namespace app\main\adapter\route\content\headers;
-
-use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
-use lib\presentation\generic\protocols\http\request\headers\HttpRequestHeadersInterface;
-use lib\data\usecases\http\headers\LifeCycleHeaders;
- 
 /** route headers adaptation to application concept */
 class RouteHeadersAdapter implements AdapterRouteContentInterface {
   /**
-  * adapt request headers to application headers 
+  * adapt request headers to application headers
   * @param array $request_content request headers
   * @return HttpRequestHeadersInterface application headers
   */

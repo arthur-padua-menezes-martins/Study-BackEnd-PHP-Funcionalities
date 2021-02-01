@@ -1,7 +1,5 @@
 <?php
 
-namespace lib\data\protocols\specific\http\headers\set;
-
 /** set headers status code */
 interface SetHeadersStatusCodeInterface {
   /**

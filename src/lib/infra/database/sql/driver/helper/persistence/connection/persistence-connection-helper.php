@@ -1,10 +1,5 @@
 <?php
 
-namespace lib\infra\database\sql\driver\helper\persistence\connection;
-
-use PDO;
-use lib\infra\database\sql\driver\protocols\persistence\connection\PersistenceConnectionHelperInterface;
-
 /** auxiliary to connect the database */
 class PersistenceConnectionHelper implements PersistenceConnectionHelperInterface {
   /** @var PDO $client database conection */
@@ -39,7 +34,7 @@ class PersistenceConnectionHelper implements PersistenceConnectionHelperInterfac
         $client = new PDO("sqlite:{$name}");
         break;
     }
-    
+
     $client->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
     $this->client = $client;
   }
@@ -59,7 +54,7 @@ class PersistenceConnectionHelper implements PersistenceConnectionHelperInterfac
   */
   public function get_connection(): PDO {
     $is_connected = $this->is_connected();
-  
+
     if (!$is_connected) {
       $this->connect();
     }

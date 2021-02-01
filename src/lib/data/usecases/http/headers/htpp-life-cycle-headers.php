@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\data\usecases\http\headers;
-
-use lib\data\protocols\specific\http\headers\LifeCycleHeadersInterface;
-
 /** auxiliary to headers life cycle */
 final class LifeCycleHeaders implements LifeCycleHeadersInterface {
   /** restricted constructor */
@@ -14,7 +10,7 @@ final class LifeCycleHeaders implements LifeCycleHeadersInterface {
   * @return self class instace
   */
   static public function start(): self {
-    $headers_instance = new self(); 
+    $headers_instance = new self();
     return $headers_instance;
   }
 

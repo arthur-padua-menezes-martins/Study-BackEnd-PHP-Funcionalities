@@ -1,10 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\helper\http\response\error\type\client;
-
-use Exception;
-use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
-
 /** the server cannot process the request due to the not allowed error */
 trait NotAllowed {
   /**

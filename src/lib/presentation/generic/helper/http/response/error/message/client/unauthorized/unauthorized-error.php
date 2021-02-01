@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\helper\http\response\error\message\client;
-
-use Exception;
-
 /** error response type, unauthorized */
 class UnauthorizedErrorMessage extends Exception {
   /** exception throwing */

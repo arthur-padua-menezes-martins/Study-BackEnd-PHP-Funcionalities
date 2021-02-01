@@ -1,10 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\helper\http\response\success\type\successful;
-
-use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
-use lib\presentation\generic\helper\http\response\success\message\successful\NoContentSuccessfulRequest;
-
 /** the process on the server was successfully requested */
 trait NoContent {
   use NoContentSuccessfulRequest;

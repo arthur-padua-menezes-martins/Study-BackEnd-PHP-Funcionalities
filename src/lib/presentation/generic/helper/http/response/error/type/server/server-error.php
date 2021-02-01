@@ -1,10 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\helper\http\response\error\type\server;
-
-use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
-use lib\presentation\generic\helper\http\response\error\message\server\ServerErrorMessage;
-
 /** the server cannot process the request due to the server error */
 trait ServerError {
   use ServerErrorMessage;

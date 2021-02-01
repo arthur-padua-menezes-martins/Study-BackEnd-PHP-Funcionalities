@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\protocols\http\request\headers;
-
-use lib\data\protocols\specific\http\headers\LifeCycleHeadersInterface;
-
 abstract class HttpRequestHeadersInterface {
   /** @var LifeCycleHeadersInterface $instance headers controller methods */
   public LifeCycleHeadersInterface $methods;

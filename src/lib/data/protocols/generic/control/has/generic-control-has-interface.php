@@ -1,11 +1,9 @@
 <?php
 
-namespace lib\data\protocols\generic\control\has;
-
 /** generic has */
 interface GenericControlHasInterface {
   /**
-  * verify if property exists 
+  * verify if property exists
   * @param string $property property name
   * @return bool has property
   */

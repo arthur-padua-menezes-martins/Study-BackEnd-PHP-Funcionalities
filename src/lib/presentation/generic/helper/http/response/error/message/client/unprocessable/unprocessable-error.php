@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\helper\http\response\error\message\client;
-
-use Exception;
-
 /** error response type, unprocessable */
 class UnprocessableErrorMessage extends Exception {
   /** exception throwing */

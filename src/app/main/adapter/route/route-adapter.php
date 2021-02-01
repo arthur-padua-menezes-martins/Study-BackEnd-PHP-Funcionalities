@@ -1,19 +1,5 @@
 <?php
 
-namespace app\main\adapter\route;
-
-use lib\presentation\generic\protocols\controller\ControllerInterface;
-use lib\presentation\generic\protocols\http\request\HttpRequestInterface;
-use lib\presentation\generic\protocols\http\request\HttpRequestEnum;
-use app\main\adapter\route\content\headers\RouteHeadersAdapter;
-use app\main\adapter\route\content\session\RouteSessionAdapter;
-use app\main\adapter\route\content\body\RouteBodyAdapter;
-use app\main\adapter\route\content\params\RouteParamsAdapter;
-use app\main\adapter\route\content\query\RouteQueryAdapter;
-use app\main\adapter\route\content\options\RouteOptionsAdapter;
-use lib\presentation\generic\protocols\http\response\HttpResponseInterface;
-use app\main\adapter\route\content\RouteContentAdapter;
-
 /** route adaptation to application concept */
 class RouteAdapter {
   /**
@@ -24,20 +10,20 @@ class RouteAdapter {
     $request = new HttpRequestInterface();
 
     $route_content_adapter = new RouteContentAdapter([
-      HttpRequestEnum::headers => new RouteHeadersAdapter(), 
-      HttpRequestEnum::session => new RouteSessionAdapter(), 
-      HttpRequestEnum::body => new RouteBodyAdapter(), 
-      HttpRequestEnum::params => new RouteParamsAdapter(), 
-      HttpRequestEnum::query => new RouteQueryAdapter(), 
+      HttpRequestEnum::headers => new RouteHeadersAdapter(),
+      HttpRequestEnum::session => new RouteSessionAdapter(),
+      HttpRequestEnum::body => new RouteBodyAdapter(),
+      HttpRequestEnum::params => new RouteParamsAdapter(),
+      HttpRequestEnum::query => new RouteQueryAdapter(),
       HttpRequestEnum::options => new RouteOptionsAdapter()
     ]);
 
     $route_content_adapter::adapt($request, [
-      HttpRequestEnum::headers => getallheaders(), 
-      HttpRequestEnum::session => $_SESSION, 
-      HttpRequestEnum::body => $_POST, 
-      HttpRequestEnum::params => $_GET, 
-      HttpRequestEnum::query => $_GET, 
+      HttpRequestEnum::headers => getallheaders(),
+      HttpRequestEnum::session => $_SESSION,
+      HttpRequestEnum::body => $_POST,
+      HttpRequestEnum::params => $_GET,
+      HttpRequestEnum::query => $_GET,
       HttpRequestEnum::options => $_SERVER
     ]);
 

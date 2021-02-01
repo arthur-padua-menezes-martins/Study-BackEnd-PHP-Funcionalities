@@ -1,11 +1,5 @@
 <?php
 
-namespace app\main\adapter\route\content;
-
-use lib\data\protocols\specific\adapter\route\AdapterRouteInterface;
-use lib\data\protocols\specific\adapter\route\content\AdapterRouteContentInterface;
-use lib\presentation\generic\protocols\http\request\HttpRequestInterface;
-
 /** route content adaptation to application concept */
 class RouteContentAdapter implements AdapterRouteInterface {
   /** @var array<AdapterRouteContentInterface> $adapters route content adapters */

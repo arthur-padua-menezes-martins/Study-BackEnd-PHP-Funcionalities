@@ -1,7 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\protocols\http\request;
-
 /** application request type */
 class HttpRequestEnum {
   /** @var string request headers */

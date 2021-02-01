@@ -1,9 +1,4 @@
 <?php
-
-namespace lib\data\protocols\specific\adapter\route;
-
-use lib\presentation\generic\protocols\http\request\HttpRequestInterface;
-
 /** auxiliary to adapt route */
 interface AdapterRouteInterface {
   /**

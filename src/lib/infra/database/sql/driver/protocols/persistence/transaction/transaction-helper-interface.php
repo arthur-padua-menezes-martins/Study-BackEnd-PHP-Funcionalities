@@ -1,7 +1,5 @@
 <?php
 
-namespace lib\infra\database\sql\driver\protocols\persistence\transaction;
-
 /** auxiliary storage security with transactions */
 interface PersistenceTransactionHelperInterface {
   /** start transaction */

@@ -1,10 +1,5 @@
 <?php
 
-namespace lib\presentation\generic\protocols\http\response;
-
-use Exception;
-use lib\presentation\generic\protocols\http\response\body\HttpResponseBodyInterface;
-
 /** application response type */
 class HttpResponseInterface {
   /** @var int $statusCode response status code */

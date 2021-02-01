@@ -1,9 +1,4 @@
 <?php
-
-namespace lib\presentation\generic\helper\http\response\error\message\client;
-
-use Exception;
-
 /** error response type, missing parameter */
 class MissingParameterErrorMessage extends Exception {
   /**

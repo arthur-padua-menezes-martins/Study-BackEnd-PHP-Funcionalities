@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\data\usecases\http\session;
-
-use lib\data\protocols\specific\http\session\LifeCycleSessionInterface;
-
 /** auxiliary to session life cycle */
 final class LifeCycleSession implements LifeCycleSessionInterface {
   /** class instance */
@@ -39,8 +35,8 @@ final class LifeCycleSession implements LifeCycleSessionInterface {
   * @return bool has property
   */
   public function has(string $property): bool {
-    return 
-      !empty(self::$_session[$property]) && 
+    return
+      !empty(self::$_session[$property]) &&
       isset(self::$_session[$property]);
   }
 
@@ -53,7 +49,7 @@ final class LifeCycleSession implements LifeCycleSessionInterface {
   public function finalize(): void {
     session_destroy();
   }
-  
+
   /** clear session content */
   public function clear(): void {
     self::$_session = [];
@@ -73,7 +69,7 @@ final class LifeCycleSession implements LifeCycleSessionInterface {
 
     return $session_property;
   }
- 
+
   /**
   * set session property
   * @param string $property property name

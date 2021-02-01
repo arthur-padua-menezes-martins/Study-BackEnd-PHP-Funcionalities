@@ -1,7 +1,5 @@
 <?php
 
-namespace lib\data\protocols\specific\adapter\route\content;
-
 /** auxiliary to adapt route content */
 abstract class AdapterRouteContentInterface {
   /**

@@ -1,8 +1,4 @@
-<?php 
-
-namespace lib\infra\database\sql\driver\helper\persistence;
-
-use lib\infra\database\sql\driver\helper\persistence\transaction\PersistenceTransactionHelper;
+<?php
 
 /** auxiliary to access persistence model */
 class PersistenceHelper extends PersistenceTransactionHelper {

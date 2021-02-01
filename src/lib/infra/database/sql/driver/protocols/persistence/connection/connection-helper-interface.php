@@ -1,9 +1,5 @@
 <?php
 
-namespace lib\infra\database\sql\driver\protocols\persistence\connection;
-
-use PDO;
-
 /** auxiliary to access the storage */
 interface PersistenceConnectionHelperInterface {
   /** connect to storage */
